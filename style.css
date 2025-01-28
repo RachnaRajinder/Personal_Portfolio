@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --bg: #222831;
+  --blue: #00FFF5;
+  --primary-color: #3498db; /* A vibrant blue */
+  --secondary-color: #e74c3c; /* A bold red */
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  text-align: center; /* Center align text */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar */
+ nav {
+            background-color: #3498db;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        nav div {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.5s;
+
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color); /* Use secondary color for contrast */
+        }
+
+        nav .icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--primary-color);
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav .icon {
+                display: block;
+            }
+
+            nav ul li {
+                text-align: center;
+                padding: 10px 0;
+                margin: 0;
+            }
+
+            nav ul li a {
+                display: block;
+                width: 100%;
+            }
+        }
+
+/* Hero section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: #f5f8fc;
+  text-align: left;
+}
+
+.hero-content {
+  flex: 1;
+  max-width: 50%;
+  text-align: left; /* Align text to the left */
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin: 0;
+  font-weight: bold;
+  color: var(--secondary-color); /* Use secondary color for contrast */
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  color: #7f8c8d;
+  margin: 0.5rem 0 2rem 0;
+  line-height: 1.6;
+}
+
+.hero-content .buttons {
+  margin-top: 1.5rem;
+}
+
+.hero-content .buttons a {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  background-color: var(--primary-color); /* Use primary color */
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-content .buttons a:hover {
+  background-color: darken(var(--primary-color), 10%); /* Darken on hover */
+  transform: scale(1.1);
+  border: 2px solid #e74c3c;
+  color: black;
+}
+
+.hero-content .buttons a:active {
+  animation: clickEffect 0.3s;
+}
+
+@keyframes clickEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+        margin: 0rem;
+    }
+    .hero-image img {
+        margin-bottom: 3rem;
+        margin-top: -1rem;
+    }
+   .hero{
+    height: 70vh;
+    }
+   .hero-content .buttons {
+   display: flex;
+   height: 3rem;
+   width: 21rem;
+   margin-top: 1rem;
+   }
+}
+
+/* About Section */
+.about {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  gap: 2rem;
+}
+
+.about-left, .about-right {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.about-left h2, .about-right h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-left p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.about-right ul {
+  margin: 1rem 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+  color: #555;
+  text-align: left;
+}
+
+.link_tag {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+.link_tag a {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  background-color: var(--secondary-color); /* Use secondary color */
+  color: rgb(245, 242, 242);
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.link_tag a:hover {
+  background-color: darken(var(--secondary-color), 10%); /* Darken on hover */
+  border: 2px solid #e74c3c;
+  color: black;
+}
+
+.language_heading {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.language-card {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.language-card i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  animation: moveLeftToRight 10s infinite linear; /* Apply animation to icons */
+}
+
+.language-card i:hover {
+  color: darken(var(--primary-color), 10%);
+  transform: scale(1.2);
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .about{
+    gap: 1rem;
+  }
+  .language-card {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .language-card i {
+    animation: none;
+  }
+}
+/* Projects Section */
+.projects {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-card img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.project-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .project-cards {
+        flex-direction: column;
+        align-items: center;
+    
+    }
+.project-card h3 {
+    font-size: 1rem;
+}
+    .project-card {
+        width: 90%;
+    }
+}
+
+/* Contact section */
+.contact {
+    padding: 4rem 2rem;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.contact a {
+    color: #007BFF;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact {
+        padding: 3rem 1.5rem;
+    }
+
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact p {
+        font-size: 0.60rem;
+    }
+     .contact a {
+        font-size: 0.50rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact {
+        padding: 2rem 1rem;
+    }
+
+    .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .contact p {
+        font-size: 0.95rem;
+    }
+
+    .contact a {
+        font-size: 1rem;
+    }
+}
