@@ -11,33 +11,48 @@
 <body>
 
     <!-- Navbar -->
-    <nav>
-        <div>Portfolio</div>
-        <div class="icon" onclick="toggleMenu()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <ul id="menuItems">
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+  <nav class="navbar">
+    <div class="logo">
+        <a href="#home">RK</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-menu" id="menuItems">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>Rachna Kumar</h1>
-            <p>Web Developer</p>
-            <div class="buttons">
-                <a href="cv.pdf" download>Download CV</a>
-                <a href="#contact">Contact Me</a>
-            </div>
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="greeting">Hello, I'm</span>
+        <h1 class="animate-text">Rachna Kumar</h1>
+        <div class="typing-text"></div>
+        <p class="bio-text">I craft responsive websites that bring ideas to life, specializing in modern web development technologies and creative solutions.</p>
+        <div class="expertise-tags">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>React</span>
         </div>
-        <div class="hero-image">
+        <div class="buttons">
+            <a href="RachnaKumar_CV.pdf" download class="btn-primary">Download CV</a>
+            <a href="#contact" class="btn-secondary">Let's Talk</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <div class="image-wrapper">
             <img src="./Images/kumar.jpg" alt="Profile Picture">
         </div>
-    </section>
+    </div>
+</section>
+
 
    <!-- About Section -->
 <section class="about" id="about">
@@ -90,64 +105,152 @@
 
 <!-- Projects Section -->
 <section class="projects" id="projects">
-    <h2>Handpicked Projects</h2>
+    <h2 class="section-title">Handpicked Projects</h2>
     <div class="project-cards">
         <div class="project-card">
-            <img src="./Images/train_light.png" class="img_train" alt="Train Light Simulator" />
-            <h3><a href="https://github.com/RachnaRajinder/train-simulator" target="_blank" rel="noopener noreferrer">Train Light Simulator</a></h3>
-            <p>A simulation system for managing light signals using Raspberry Pi, designed for real-time operations.</p>
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="./Images/train_light.png" alt="Train Light Simulator" />
+                    <div class="project-overlay">
+                        <h3>Train Light Simulator</h3>
+                        <span class="view-more">Hover to learn more</span>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h3><a href="https://github.com/RachnaRajinder/train-simulator" target="_blank" rel="noopener noreferrer">Train Light Simulator</a></h3>
+                    <p>A simulation system for managing light signals using Raspberry Pi, designed for real-time operations.</p>
+                    <div class="tech-stack">
+                        <span>Raspberry Pi</span>
+                        <span>Python</span>
+                        <span>IoT</span>
+                    </div>
+                    <a href="https://github.com/RachnaRajinder/train-simulator" class="view-project" target="_blank" rel="noopener noreferrer">View Project →</a>
+                </div>
+            </div>
         </div>
-        <div class="project-card">
-            <img src="./Images/drone.jpg" class="img_train" alt="Ruutikangaas Drone Project" />
-            <h3><a href="https://github.com/SkySight-Stream" target="_blank" rel="noopener noreferrer">Ruutikangaas Drone Project</a></h3>
-            <p>A service using drone technology for live video streaming and analytics for industrial applications.</p>
+
+         <div class="project-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="./Images/drone.jpg" alt="Ruutikangaas Drone Project" />
+                    <div class="project-overlay">
+                        <h3>Ruutikangaas Drone Project</h3>
+                        <span class="view-more">Hover to learn more</span>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h3><a href="https://github.com/SkySight-Stream" target="_blank" rel="noopener noreferrer">Ruutikangaas Drone Project</a></h3>
+                    <p>A service using drone technology for live video streaming and analytics for industrial applications.</p>
+                    <div class="tech-stack">
+                        <span>Kotlin</span>
+                        <span>Parrot Anafi Drone</span>
+                        <span>React Native</span>
+                    </div>
+                    <a href="https://github.com/SkySight-Stream" class="view-project" target="_blank" rel="noopener noreferrer">View Project →</a>
+                </div>
+            </div>
         </div>
-        <div class="project-card">
-            <img src="./Images/hotels.png" class="img_train" alt="Hotel Booking" />
-            <h3><a href="https://github.com/Mobile-Dev-Project/Mobile-App" target="_blank" rel="noopener noreferrer">Hotel Booking</a></h3>
-            <p>A mobile app built with React Native and Firebase for seamless hotel reservations.</p>
+
+         <div class="project-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="./Images/hotels.png" alt="Hotel Booking" />
+                    <div class="project-overlay">
+                        <h3>Hotel Booking</h3>
+                        <span class="view-more">Hover to learn more</span>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h3><a href="https://github.com/Mobile-Dev-Project/Mobile-App" target="_blank" rel="noopener noreferrer">Hotel Booking</a></h3>
+                    <p>A mobile app built with React Native and Firebase for seamless hotel reservations.</p>
+                    <div class="tech-stack">
+                        <span>React Native</span>
+                        <span>Firebase</span>
+                        <span>NodeJs</span>
+                    </div>
+                    <a href="https://github.com/Mobile-Dev-Project/Mobile-App" class="view-project" target="_blank" rel="noopener noreferrer">View Project →</a>
+                </div>
+            </div>
         </div>
-    </div>
-    <br><br>
-    <div class="project-cards">
-        <div class="project-card">
-            <img src="./Images/search_movie.png" class="img_train" alt="Search Movie List" />
-            <h3><a href="https://github.com/RachnaRajinder/SearchMovieList/tree/master" target="_blank" rel="noopener noreferrer">Search Movie List</a></h3>
-            <p>An application to search movies, developed in Kotlin with Firebase integration for real-time results.</p>
+
+         <div class="project-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="./Images/search_movie.png" alt="Search Movie List" />
+                    <div class="project-overlay">
+                        <h3>Search Movie List</h3>
+                        <span class="view-more">Hover to learn more</span>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h3><a href="https://github.com/RachnaRajinder/SearchMovieList/tree/master" target="_blank" rel="noopener noreferrer">Search Movie List</a></h3>
+                    <p>A React JS project for modern logistics solutions, focusing on user experience and scalability.</p>
+                    <div class="tech-stack">
+                        <span>Kotlin</span>
+                        <span>SQL</span>
+                        <span>Mobile App</span>
+                    </div>
+                    <a href="https://github.com/RachnaRajinder/SearchMovieList/tree/master" class="view-project" target="_blank" rel="noopener noreferrer">View Project →</a>
+                </div>
+            </div>
         </div>
-        <div class="project-card">
-            <img src="./Images/shiply.png" class="img_train" alt="Shiply Project" />
-            <h3><a href="https://github.com/Oamk-DIN22SP" target="_blank" rel="noopener noreferrer">Shiply Project</a></h3>
-            <p>A React Native project for modern logistics solutions, focusing on user experience and scalability.</p>
+
+         <div class="project-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="./Images/shiply.png" alt="shiply" />
+                    <div class="project-overlay">
+                        <h3>Shiply Project</h3>
+                        <span class="view-more">Hover to learn more</span>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h3><a href="https://github.com/Oamk-DIN22SP" target="_blank" rel="noopener noreferrer">Shiply Project</a></h3>
+                    <p>A simulation system for managing light signals using Raspberry Pi, designed for real-time operations.</p>
+                    <div class="tech-stack">
+                        <span>React JS</span>
+                        <span>Mongodb</span>
+                        <span>NodeJs</span>
+                    </div>
+                    <a href="https://github.com/Oamk-DIN22SP" class="view-project" target="_blank" rel="noopener noreferrer">View Project →</a>
+                </div>
+            </div>
         </div>
-        <div class="project-card">
-            <img src="./Images/recipe.png" class="img_train" alt="Recipe Project" />
-            <h3><a href="https://github.com/RachnaRajinder/Javascript" target="_blank" rel="noopener noreferrer">Recipe Project</a></h3>
-            <p>Pure Html CSS and Javascript using third party Api for browsing recipes with a user-friendly interface.</p>
+         <div class="project-card">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="./Images/recipe.png" alt="Recipe Project" />
+                    <div class="project-overlay">
+                        <h3>Recipe Project</h3>
+                        <span class="view-more">Hover to learn more</span>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <h3><a href="https://github.com/RachnaRajinder/Javascript" target="_blank" rel="noopener noreferrer">Train Light Simulator</a></h3>
+                    <p>Pure Html CSS and Javascript using third party Api for browsing recipes with a user-friendly interface.</p>
+                    <div class="tech-stack">
+                        <span>Html</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <a href="https://github.com/RachnaRajinder/Javascript" class="view-project" target="_blank" rel="noopener noreferrer">View Project →</a>
+                </div>
+            </div>
         </div>
-    </div>
+
+</div>
 </section>
-
-
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <h2>Contact Me</h2>
         <p>Feel free to reach out via email or phone:</p>
-        <p>Email: <a href="mailto:your.email@example.com">RachnaRajinder111@gmail.com</a></p>
+        <p>Email: <a href="mailto:your.email@example.com">rachnarajinder111@gmail.com</a></p>
         <p>Phone: <a href="tel:+358415705908">+358415705908</a></p>
         <p>Github:<a href="https://github.com/RachnaRajinder">https://github.com/RachnaRajinder</a></p>
         <p>Linkedin:<a href="https://www.linkedin.com/in/rachna-rajinder/">https://www.linkedin.com/in/rachna-rajinder/</a></p>
     </section>
-
-  <!-- Script -->
-    <script>
-        function toggleMenu() {
-            const menu = document.getElementById('menuItems');
-            menu.classList.toggle('active');
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
 
